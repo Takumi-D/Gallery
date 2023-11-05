@@ -1,0 +1,19 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.logo{
+  width: 64px;
+  height: 64px;
+}
+
+.btn-sun{
+  height: 20px;
+  border: none;
+  background: initial;
+  padding: 0;
+  cursor: pointer;
+}

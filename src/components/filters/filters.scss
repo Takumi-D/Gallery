@@ -1,0 +1,241 @@
+:root {
+  --var-borderColor-input: #000;
+  --var-bgColor-input: #fff;
+  --var-color-text-input: #000;
+  --var-color-arr: #000;
+  --var-bgColor-input-hover: #000;
+  --var-bgColor-input-hover-text: #fff;
+}
+
+[data-dark] {
+  --var-borderColor-input: #fff;
+  --var-bgColor-input: #0C0C0C;
+  --var-color-text-input: #fff;
+  --var-color-arr: #fff;
+  --var-bgColor-input-hover: #fff;
+  --var-bgColor-input-hover-text: #000;
+}
+
+.wrapper-filters{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+
+.filter{
+  max-width: 265px;
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid var(--var-borderColor-input);
+  background: var(--var-bgColor-input);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--var-color-text-input);
+  padding-left: 10px;
+  margin-right: 20px;
+  position: relative;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  & > option {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &::placeholder{
+    padding-left: 15px;
+  }
+
+  &:placeholder-shown {
+    padding-left: 0;
+  }
+}
+
+.filter-created{
+  position: relative;
+  height: 45px;
+  padding: 0;
+  transition: border-radius 0.5s linear;
+  cursor: pointer;
+
+  &-text{
+    margin: 13.5px 0 13.5px 15px;
+    position: relative;
+    height: 16px;
+    max-width: 190px;
+    overflow: hidden;
+  }
+
+  &.opening {
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    transition: all 0s linear;
+  }
+
+  & > .d-none{
+    max-height: 0;
+    transition: max-height .3s, padding .3s, opacity .3s linear;
+    opacity: 0;
+    padding: 0 23px 0 18px;
+  }
+
+  & > .wrapper-form-list.d-none{
+    max-height: 0;
+    transition: all .3s linear;
+    padding: 0 8px 0 0 ;
+
+    & > .form-list {
+      max-height: 0;
+      transition: all .3s linear;
+      width: 265px;
+    }
+  }
+}
+
+.wrapper-form{
+  display: flex;
+  align-items: center;
+  padding: 20px 23px 20px 18px;
+  position: absolute;
+  background: var(--var-bgColor-input);
+  border-radius: 0 0 8px 8px;
+  border: 1px solid var(--var-borderColor-input);
+  top: 43px;
+  left: -1px;
+  border-top: none;
+  transition: padding .3s, max-height .3s linear;
+  width: 265px;
+  overflow: hidden;
+  z-index: 1;
+  max-height: 86px;
+}
+
+.input-created{
+  width: 50%;
+  height: 45px;
+  border-radius: 8px;
+  background: #EFEFEF;
+  border: none;
+
+  &::placeholder{
+    color: rgba(0, 0, 0, 0.30);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &:placeholder-shown{
+    padding-left: 15px;
+  }
+}
+
+.arr{
+  width: 12px;
+  height: 1px;
+  background: var(--var-color-arr);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.wrapper-form-list{
+  max-height: 300px;
+  padding: 0 8px 0 0;
+}
+
+.ScrollbarsCustom{
+  display: block;
+  max-height: 300px;
+  padding: 10px 0 15px 0;
+  overflow: auto;
+  transition: max-height 0.3s, padding 0.3s linear;
+  background: var(--var-bgColor-input);
+  border-radius: 0 0 8px 8px;
+  border: 1px solid var(--var-borderColor-input);
+
+  & + .ScrollbarsCustom{
+    padding: initial;
+    height: 0;
+    border: none;
+    max-height: 0;
+  }
+
+  &-Wrapper{
+    width: 100%;
+  }
+}
+
+.trackY{
+  width: 9px;
+  right: 8px;
+}
+
+.filter-item {
+  color: var(--var-color-text-input);
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  padding: 10px 0 10px 30px;
+
+  &:hover {
+    background: var(--var-bgColor-input-hover);
+    color: var(--var-bgColor-input-hover-text);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cleaning{
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translate(0, -50%);
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+
+  & > .cleaning-img {
+    width: 8px;
+    height: 8px
+  }
+
+  & > .arr-img{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+}
+
+.arr-filter{
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translate(0, -50%);
+  width: 10px;
+  height: 6px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.opening {
+  & > .arr-filter{
+    top: 50%;
+    transform: translate(0, -50%) rotate(180deg);
+    transition: all 0.3s linear;
+  }
+}

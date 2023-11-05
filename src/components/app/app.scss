@@ -1,0 +1,114 @@
+:root {
+  --var-bgcolor: #fff;
+}
+
+[data-dark] {
+  --var-bgcolor: #000;
+}
+
+.wrapper{
+  background: var(--var-bgcolor);
+}
+
+.app{
+  max-width: 1386px;
+  width: 100%;
+  padding: 35px 123px 97px 123px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .app {
+    padding: 35px 42px 62px 42px;
+  }
+  .cart {
+    height: 230px;
+  }
+
+  .wrapper-form{
+    flex-flow: column;
+    padding: 20px 55px 20px 55px;
+    max-height: 162px;
+  }
+
+  .filter-created > .d-none {
+    padding: 0 55px 0 55px;
+  }
+
+  .input-created{
+    width: 100%;
+  }
+
+  .arr{
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 35px 34px 54px 34px;
+  }
+
+  .wrapper-form{
+    flex-flow: column;
+    padding: 20px 25px 20px 25px;
+    max-height: 162px;
+  }
+
+  .filter-created > .d-none {
+    padding: 0 25px 0 25px;
+  }
+
+  .filter-item{
+    padding: 10px 0 10px 15px;
+  }
+
+  .tile {
+    margin-bottom: 35px;
+  }
+
+  .cart{
+    flex-basis: calc((100% / 2) - 1rem);
+    height: 249px;
+  }
+}
+
+@media (max-width: 560px) {
+  .app {
+    padding: 25px 20px 34px 20px;
+  }
+
+  .wrapper-filters{
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .filter{
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .wrapper-form{
+    flex-flow: initial;
+    padding: 20px 17.5px 20px 17.5px;
+    max-height: 162px;
+  }
+
+  .arr {
+    margin: 0 6px;
+  }
+
+  .filter-created > .d-none {
+    padding: 0 17.5px 0 17.5px;
+  }
+
+  .cart{
+    flex: 1 1 100%;
+    height: 205px;
+  }
+
+  .tile {
+    margin-bottom: 30px;
+  }
+}
